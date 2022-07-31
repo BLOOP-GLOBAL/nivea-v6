@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta
+		content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui, width = device-width'
+		name='viewport' />
+
+	<title>Nivea mini game</title>
+
+	<link rel="stylesheet" type="text/css" href="media/jquery/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="media/style.css" />
+
+	<script>
+
+		document.addEventListener('touchmove', function (e) {
+			e.preventDefault();
+		}, { passive: false });
+
+		var lastTouchEnd = 0;
+
+		document.addEventListener('touchend', function (event) {
+			var now = (new Date()).getTime();
+			if (now - lastTouchEnd <= 50) {
+				event.preventDefault();
+			}
+			lastTouchEnd = now;
+		}, { passive: false });
+
+	</script>
+
+</head>
+
+<body>
+	<!--Preloader-->
+	<div class="row">
+		<div id="html5Loader" class="col-sm-12">
+			<div id="DvLoaderCont">
+				<div id="DvLoaderProgress"></div>
+			</div>
+		</div>
+	</div>
+	<div id="wrapper">
+
+		<div id="load_images" style="width:0px;height:0px;opacity: 0;">
+			<img src="media/images/bg2.jpg">
+			<img src="media/images/bgstart.jpg">
+			<img src="media/images/logo.png">
+			<img src="media/images/lumin1.png">
+			<img src="media/images/girl.png">
+			<img src="media/images/girlwithblemishes.png">
+			<img src="media/images/audio.png">
+			<img src="media/images/audioplay.png">
+			<img src="media/images/instructions.png">
+			<img src="media/images/gamebg.jpg">
+
+		</div>
+
+		<div id="game_container">
+			<div id="faceboxcream" class="faceboxcream"></div>
+			<div id="audiobgm" class="audiostyle"></div>
+			<div id="pauseaudiobgm" class="pauseaudiostyle"></div>
+			<div id="mygame">
+				<div id="startscreen">
+					<div id="logobg" class="logobgstyle">
+						<div id="logo" class="logostyle"></div>
+					</div>
+					<div id="centerbox"></div>
+					<div id="strcreem" class="strcreem"></div>
+					<div id="play"></div>
+				</div>
+			</div>
+			<div id="gamescreen" class="gamescreen">
+				<div id="topscreen" class="topscreen">
+					<div id="gmlogobg" class="gmlogobgstyle">
+						<div id="gmlogo" class="gmlogostyle"></div>
+					</div>
+				</div>
+				<div id="girl"></div>
+				<div id="finalgirl" class="finalgirl"></div>
+				<div id="arrow" class="arrow arrowimage"></div>
+				<div id="cream" class="myimage"></div>
+				<div id="bomtxt"> </div>
+
+				<div id="text_200">+200</div>
+				<div id="text_100">+100</div>
+				<div id="text_20">+20</div>
+				<div id="text_15">+15</div>
+				<div id="text_10">+10</div>
+				<div id="text_150">+150</div>
+
+			</div>
+			<div id="litebg">
+				<div id="creem1"></div>
+				<div id="gametxt"> </div>
+			</div>
+
+			<div id="scorepanel" class="scorepanel">
+				<div id="logobg" class="logobgstyle">
+					<div id="logo" class="logostyle"></div>
+				</div>
+				<div id="finaltxScore" class="finaltxScore">00</div>
+				<div id="replay" class="replay"></div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	</div>
+
+	<audio id="bgm" src="media/audio/bgm.mp3" type="audio/mpeg"></audio>
+	
+
+	<script type="text/javascript" src="media/jquery/jquery.js"></script>
+
+	<script type="text/javascript" src="media/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="media/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="media/jquery/jquery.ui.touch-punch.js"></script>
+
+	<!-- Loader Libraries Starts -->
+	<script type="text/javascript" src="media/preloader/jquery.html5Loader.min.js"></script>
+	<script type="text/javascript" src="media/preloader/animation/jquery.big-counter.js"></script>
+	<script type="text/javascript" src="media/preloader/Main.class.js"></script>
+	<script type="text/javascript" src="media/preloader/configPreload.js"></script>
+	<!--Loader Libraries Ends -->
+
+	<script type="text/javascript" src="media/data/data.js"></script>
+	<script type="text/javascript" src="media/custom.js"></script>
+</body>
+
+</html>
